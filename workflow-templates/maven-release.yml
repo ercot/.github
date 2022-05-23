@@ -1,7 +1,8 @@
 name: Maven Project Release
 
 on:
-  workflow_call:
+  push:
+    branches: [ main ]
 
 jobs:
   build:

@@ -1,11 +1,8 @@
 name: Container Image Release
 
 on:
-  workflow_call:
-    inputs:
-      image:
-        required: true
-        type: string
+  push:
+    branches: [ main ]
 
 jobs:
   build:
