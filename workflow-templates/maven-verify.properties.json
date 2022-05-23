@@ -1,0 +1,10 @@
+{
+    "name": "Maven Project Verify",
+    "description": "GitHub Actions workflow for building and verifying Maven projects.",
+    "categories": [
+        "Maven"
+    ],
+    "filePatterns": [
+        "pom.xml"
+    ]
+}

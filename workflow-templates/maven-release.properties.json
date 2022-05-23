@@ -1,0 +1,10 @@
+{
+    "name": "Maven Project Release",
+    "description": "GitHub Actions workflow for building and releasing Maven projects to GitHub Packages.",
+    "categories": [
+        "Maven"
+    ],
+    "filePatterns": [
+        "pom.xml"
+    ]
+}

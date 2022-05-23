@@ -1,0 +1,11 @@
+{
+    "name": "Container Image Release",
+    "description": "GitHub Actions workflow for building and verifying container image projects.",
+    "categories": [
+        "Docker",
+        "OCI"
+    ],
+    "filePatterns": [
+        "Dockerfile"
+    ]
+}

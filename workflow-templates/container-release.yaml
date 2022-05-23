@@ -1,0 +1,27 @@
+name: Container Image Release
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Docker Buildx
+      uses: docker/setup-buildx-action@v1.6.0
+
+    - name: Login to GHCR
+      uses: docker/login-action@v1.14.1
+      with:
+        registry: ghcr.io
+        username: _json_key
+        password: ${{ secrets.PACKAGES_PAT }}
+
+    - name: Build the Container Image
+      uses: docker/build-push-action@v2.10.0
+      with:
+        tags: ghcr.io/${{GITHUB_REPOSITORY}}:latest, ghcr.io/${{GITHUB_REPOSITORY}}:${{ github.sha }}
+        push: true
