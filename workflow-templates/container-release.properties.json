@@ -2,8 +2,7 @@
     "name": "Container Image Release",
     "description": "GitHub Actions workflow for building and releasing container image projects to GHCR.",
     "categories": [
-        "Docker",
-        "OCI"
+        "Dockerfile"
     ],
     "filePatterns": [
         "Dockerfile"
