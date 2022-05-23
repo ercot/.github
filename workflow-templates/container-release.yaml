@@ -2,7 +2,7 @@ name: Container Image Release
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:

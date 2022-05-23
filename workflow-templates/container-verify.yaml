@@ -2,7 +2,9 @@ name: Container Image Verification
 
 on:
   push:
-    branches-ignore: [ master ]
+    branches-ignore: [ main ]
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
