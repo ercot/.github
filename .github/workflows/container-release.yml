@@ -11,7 +11,6 @@ jobs:
   build:
     name: Image Build/Deploy
     runs-on: ubuntu-latest
-    secrets: inherit
     permissions:
       actions: read
       contents: read
@@ -34,5 +33,5 @@ jobs:
     - name: Build the Container Image
       uses: docker/build-push-action@v2.10.0
       with:
-        tags: ${{ image }}:latest, ${{ image }}:${{ github.sha }}
+        tags: ${{ inputs.image }}:latest, ${{ inputs.image }}:${{ github.sha }}
         push: true
