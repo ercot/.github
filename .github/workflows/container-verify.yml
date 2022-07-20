@@ -31,7 +31,7 @@ jobs:
         password: ${{ secrets.PACKAGES_PAT }}
 
     - name: Build the Container Image
-      uses: docker/build-push-action@v3.0.0
+      uses: docker/build-push-action@v3.1.0
       with:
         tags: ${{ inputs.image }}:latest, ${{ inputs.image }}:${{ github.sha }}
         push: false
